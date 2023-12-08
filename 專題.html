@@ -3,46 +3,64 @@
 
 <head>
   <title>抖音行銷問卷</title>
+
   <style>
     body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;  
+      background: linear-gradient(to bottom, #f1d6ab, #e2b395);
+      font-family: 'Microsoft JhengHei';
     }
-    
+
     h1 {
-      text-align: center;  
-      color: #333;
+      color: #183a1d;
+      text-align: center;
+      font-size: 36px;
+      text-shadow: 1px 1px 1px #dbd2c9;
     }
-    
+
     button {
-      display: block;
+      display: block;  
       width: 200px;
-      padding: 10px;
+      padding: 15px;
+      background-color: #44bd32;
+      color: white;
       border: none;
-      background-color: #3f51b5;
-      color: #fff;
-      font-size: 16px;
-      margin: 20px auto;
-      border-radius: 5px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 4px #838383;
+      font-size: 18px;
+      margin: 50px auto;
       cursor: pointer;
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <h1>我們是真理大學資管系同學<br>麻煩點擊完成問卷</h1>
-
-  <button onclick="goRandomPage()">進入問卷</button>
+  <h1>歡迎參與我們的抖音行銷問卷調查</h1>
+  
+  <button onclick="goToSurvey()">馬上開始</button>
 
   <script>
-    function goRandomPage() {
-      var pages = ['https://www.google.com.tw/?hl=zh_TW', 'https://sso.au.edu.tw/portal/'];
-      var randomPage = pages[Math.floor(Math.random() * pages.length)];
-      window.location.href = randomPage;
+
+    var surveyPages = {
+      1: "https://forms.gle/Bj6MVqVxoEwNNxxo9",
+      2: "https://forms.gle/EmpqTD3xFGQnSQTB8"   
+    };
+    
+    function goToSurvey() {
+    
+      // 隨機抽取單/雙數  
+      var randomNum = Math.floor(Math.random() * 2) + 1;
+      
+      // 獲取對應的問卷連結
+      var targetUrl = surveyPages[randomNum];
+
+      // 連結到問卷表單
+      window.location.href = targetUrl;
     }
+
   </script>
 
 </body>
-
 </html>
