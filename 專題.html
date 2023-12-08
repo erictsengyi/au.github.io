@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>抖音行銷問卷</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;  
+    }
+    
+    h1 {
+      text-align: center;  
+      color: #333;
+    }
+    
+    button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      border: none;
+      background-color: #3f51b5;
+      color: #fff;
+      font-size: 16px;
+      margin: 20px auto;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>我們是真理大學資管系同學<br>麻煩點擊完成問卷</h1>
+
+  <button onclick="goRandomPage()">進入問卷</button>
+
+  <script>
+    function goRandomPage() {
+      var pages = ['https://www.google.com.tw/?hl=zh_TW', 'https://sso.au.edu.tw/portal/'];
+      var randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = randomPage;
+    }
+  </script>
+
+</body>
+
+</html>
